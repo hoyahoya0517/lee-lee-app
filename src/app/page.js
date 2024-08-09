@@ -4,12 +4,19 @@ import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa6";
+import relativeTime from "dayjs/plugin/relativeTime";
+import dayjs from "dayjs";
+
+dayjs.extend(relativeTime);
 
 export default function Home() {
   const [tap, setTap] = useState(false);
+  const [day, setDay] = useState("");
   useEffect(() => {
-    console.log(tap);
-  }, [tap]);
+    const date1 = dayjs(Date.now());
+    const date2 = dayjs("2024-08-07");
+    setDay(Number(date1.diff(date2, "day")) + 1);
+  });
   return (
     <div className={styles.home}>
       <div className={styles.icon}>
@@ -24,8 +31,8 @@ export default function Home() {
         whileDrag={{ scale: 1.2 }}
         dragSnapToOrigin
       >
-        <FaHeart size={64} color="red"></FaHeart>
-        <span>{tap && "hihi"}</span>
+        <FaHeart size={90} color="red"></FaHeart>
+        {tap && <span>{day}</span>}
       </motion.div>
     </div>
   );
