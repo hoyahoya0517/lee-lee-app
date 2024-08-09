@@ -7,6 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+.icon {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 3.5rem;
+}
+.icon span {
+  font-size: 5rem;
+}
 .heart {
   position: relative;
 }

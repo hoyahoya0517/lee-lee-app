@@ -12,12 +12,13 @@ export default function Home() {
   }, [tap]);
   return (
     <div className={styles.home}>
-      <div className={styles.icon}></div>
+      <div className={styles.icon}>
+        <span>🧓🏻</span>
+        <span>🙋🏻‍♀️</span>
+      </div>
       <motion.div
         className={styles.heart}
         drag
-        onTap={() => setTap(true)}
-        onTapCancel={() => setTap(false)}
         onDragStart={() => setTap(true)}
         onDragEnd={() => setTap(false)}
         whileDrag={{ scale: 1.2 }}
