@@ -16,7 +16,7 @@
   gap: 4rem;
 }
 .icon span {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 .heart {
   position: relative;
@@ -24,7 +24,7 @@
 .heart span {
   font-size: 1.3rem;
   position: absolute;
-  top: 45%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
