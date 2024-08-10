@@ -28,7 +28,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, type: "spring", bounce: 0.4 }}
         className={styles.heart}
-        onClick={() => {
+        onTap={() => {
           setHeartOn(true);
         }}
       >

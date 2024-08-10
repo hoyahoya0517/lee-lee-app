@@ -20,6 +20,7 @@
 }
 .heart {
   position: relative;
+  z-index: 2;
 }
 .heart span {
   font-size: 1rem;
