@@ -16,13 +16,13 @@
   gap: 4rem;
 }
 .icon span {
-  font-size: 3rem;
+  font-size: 6.5rem;
 }
 .heart {
   position: relative;
 }
 .heart span {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   position: absolute;
   top: 49%;
   left: 50%;

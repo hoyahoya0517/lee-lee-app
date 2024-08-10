@@ -31,7 +31,7 @@ export default function Home() {
         whileDrag={{ scale: 1.2 }}
         dragSnapToOrigin
       >
-        <FaHeart size={80} color="red"></FaHeart>
+        <FaHeart size={70} color="red"></FaHeart>
         {tap && <span>{day}</span>}
       </motion.div>
     </div>
