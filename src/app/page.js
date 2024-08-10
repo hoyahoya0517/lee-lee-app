@@ -28,11 +28,14 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, type: "spring", bounce: 0.4 }}
         className={styles.heart}
-        onTap={() => {
-          setHeartOn(true);
-        }}
       >
-        <FaHeart size={64} color="red" />
+        <FaHeart
+          onClick={() => {
+            setHeartOn(true);
+          }}
+          size={64}
+          color="red"
+        />
         {heartOn && <span>{day}</span>}
       </motion.div>
     </div>
