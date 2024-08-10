@@ -25,8 +25,8 @@ export default function Home() {
       </div>
       <motion.div
         initial={{ opacity: 0, y: -500 }}
-        animate={{ opacity: 1, y: 0, scale: heartOn ? 1.7 : 1 }}
-        transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, type: "spring", bounce: 0.4 }}
         className={styles.heart}
         onClick={() => {
           setHeartOn(true);
