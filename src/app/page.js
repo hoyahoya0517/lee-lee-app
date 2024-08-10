@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 dayjs.extend(relativeTime);
 
 export default function Home() {
-  const [tap, setTap] = useState(false);
+  const [heartOn, setHeartOn] = useState(false);
   const [day, setDay] = useState("");
   useEffect(() => {
     const date1 = dayjs(Date.now());
@@ -20,19 +20,31 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.icon}>
-        <span>🧓🏻</span>
-        <span>🙋🏻‍♀️</span>
+        <motion.span drag>🧓🏻</motion.span>
+        <motion.span drag>🙋🏻‍♀️</motion.span>
       </div>
       <motion.div
+        initial={{ opacity: 0, y: -500 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+        whileTap={{
+          scale: 2,
+          transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 10,
+          },
+        }}
         className={styles.heart}
-        drag
-        onDragStart={() => setTap(true)}
-        onDragEnd={() => setTap(false)}
-        whileDrag={{ scale: 1.2 }}
-        dragSnapToOrigin
+        onTouchStart={() => {
+          setHeartOn(true);
+        }}
+        onTouchEnd={() => {
+          setHeartOn(false);
+        }}
       >
-        <FaHeart size={70} color="red"></FaHeart>
-        {tap && <span>{day}</span>}
+        <FaHeart size={62} color="red" />
+        {heartOn && <span>{day}</span>}
       </motion.div>
     </div>
   );
