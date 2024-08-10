@@ -7,6 +7,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 body {
   width: 100%;
