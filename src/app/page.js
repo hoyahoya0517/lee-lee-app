@@ -33,11 +33,14 @@ export default function Home() {
           onClick={() => {
             setHeartOn((prev) => !prev);
           }}
-          size={70}
+          size={82}
           color="red"
         />
         {heartOn && <span>{day}</span>}
       </motion.div>
+      <div className={styles.menu}>
+        <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
+      </div>
     </div>
   );
 }
