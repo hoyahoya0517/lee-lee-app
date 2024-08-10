@@ -21,6 +21,7 @@
 .heart {
   position: relative;
   z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
 .heart span {
   font-size: 1rem;
@@ -30,4 +31,5 @@
   transform: translate(-50%, -50%);
 }
 .heart svg {
+  -webkit-tap-highlight-color: transparent;
 }
