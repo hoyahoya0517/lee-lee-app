@@ -25,25 +25,14 @@ export default function Home() {
       </div>
       <motion.div
         initial={{ opacity: 0, y: -500 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0, scale: heartOn ? 1.7 : 1 }}
         transition={{ duration: 1, type: "spring", bounce: 0.4 }}
-        whileTap={{
-          scale: 2,
-          transition: {
-            type: "spring",
-            stiffness: 400,
-            damping: 10,
-          },
-        }}
         className={styles.heart}
-        onTouchStart={() => {
+        onClick={() => {
           setHeartOn(true);
         }}
-        onTouchEnd={() => {
-          setHeartOn(false);
-        }}
       >
-        <FaHeart size={62} color="red" />
+        <FaHeart size={64} color="red" />
         {heartOn && <span>{day}</span>}
       </motion.div>
     </div>
