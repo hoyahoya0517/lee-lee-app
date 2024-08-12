@@ -43,7 +43,13 @@ export default function Home() {
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1, rotateZ: 360 }}
-        transition={{ type: "spring", stiffness: 1, damping: 1.5, bounce: 0.2 }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 1,
+          damping: 1.3,
+          bounce: 0.2,
+        }}
         className={styles.menu}
         onClick={() => {
           setNavOn((prev) => !prev);

@@ -26,7 +26,7 @@
 }
 .heart span {
   font-size: 1rem;
-  position: fixed;
+  position: absolute;
   top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
