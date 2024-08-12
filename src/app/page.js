@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa6";
 import relativeTime from "dayjs/plugin/relativeTime";
 import dayjs from "dayjs";
+import Nav from "./_components/nav/Nav";
 
 dayjs.extend(relativeTime);
 
 export default function Home() {
   const [heartOn, setHeartOn] = useState(false);
+  const [navOn, setNavOn] = useState(false);
   const [day, setDay] = useState("");
   useEffect(() => {
     const date1 = dayjs(Date.now());
@@ -24,8 +26,8 @@ export default function Home() {
         <motion.span drag>🙋🏻‍♀️</motion.span>
       </div>
       <motion.div
-        initial={{ opacity: 0, y: -500 }}
-        animate={{ opacity: 1, y: 0, scale: heartOn ? 1.5 : 1 }}
+        initial={{ opacity: 0.5, y: -500 }}
+        animate={{ opacity: 1, y: 0, scale: heartOn ? 1.2 : 1 }}
         transition={{ duration: 1.3, type: "spring", bounce: 0.4 }}
         className={styles.heart}
       >
@@ -38,9 +40,15 @@ export default function Home() {
         />
         {heartOn && <span>{day}</span>}
       </motion.div>
-      <div className={styles.menu}>
+      <div
+        className={styles.menu}
+        onClick={() => {
+          setNavOn((prev) => !prev);
+        }}
+      >
         <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
       </div>
+      <Nav navOn={navOn} />
     </div>
   );
 }

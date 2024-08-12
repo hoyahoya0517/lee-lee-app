@@ -1,0 +1,28 @@
+.navOn {
+  height: 100%;
+  z-index: 2222;
+  position: absolute;
+  display: flex;
+  top: 6%;
+  left: 10%;
+  transition: 0.7s;
+  transform: rotate(0);
+}
+.navOn img {
+  height: 100%;
+  object-fit: cover;
+}
+.navOff {
+  height: 100%;
+  z-index: 2222;
+  position: absolute;
+  display: flex;
+  top: 10%;
+  left: 500%;
+  transition: 1s;
+  transform: rotate(60deg);
+}
+.navOff img {
+  height: 100%;
+  object-fit: cover;
+}
