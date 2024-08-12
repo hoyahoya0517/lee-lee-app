@@ -40,14 +40,17 @@ export default function Home() {
         />
         {heartOn && <span>{day}</span>}
       </motion.div>
-      <div
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotateZ: 360 }}
+        transition={{ type: "spring", stiffness: 1, damping: 1.5, bounce: 0.2 }}
         className={styles.menu}
         onClick={() => {
           setNavOn((prev) => !prev);
         }}
       >
         <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
-      </div>
+      </motion.div>
       <Nav navOn={navOn} />
     </div>
   );

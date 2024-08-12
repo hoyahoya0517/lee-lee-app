@@ -1,10 +1,10 @@
 .navOn {
   height: 100%;
   z-index: 2222;
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 6%;
-  left: 10%;
+  left: -2%;
   transition: 0.7s;
   transform: rotate(0);
 }
@@ -15,7 +15,7 @@
 .navOff {
   height: 100%;
   z-index: 2222;
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 10%;
   left: 500%;
@@ -25,4 +25,13 @@
 .navOff img {
   height: 100%;
   object-fit: cover;
+}
+.menu {
+  background-color: blueviolet;
+  z-index: 3333;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 25%;
 }

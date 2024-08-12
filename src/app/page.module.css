@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 .icon {
-  position: absolute;
+  position: fixed;
   top: 13%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -26,16 +26,15 @@
 }
 .heart span {
   font-size: 1rem;
-  position: absolute;
+  position: fixed;
   top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .menu {
-  position: absolute;
-  bottom: -2%;
-  right: -2%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  bottom: 1.5%;
+  right: 3%;
   display: flex;
   width: 60px;
   z-index: 9999;
