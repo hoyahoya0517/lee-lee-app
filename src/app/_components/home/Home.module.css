@@ -27,7 +27,7 @@
 .heart span {
   font-size: 1rem;
   position: absolute;
-  top: 49%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -37,7 +37,7 @@
   right: 3%;
   display: flex;
   width: 60px;
-  z-index: 9999;
+  z-index: 3333;
 }
 .menu img {
   width: 100%;

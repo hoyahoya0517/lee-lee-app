@@ -1,0 +1,41 @@
+.iconSettingContainer {
+  position: fixed;
+  width: 200px;
+  height: 110px;
+  top: 38%;
+  left: 11%;
+  z-index: 3333;
+  background-color: white;
+}
+.iconSetting {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.iconSettingInput {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.iconSettingInput input {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+}
+.iconSettingInput input:focus {
+  outline: none;
+}
+.iconSetting button {
+  width: 75px;
+  height: 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}

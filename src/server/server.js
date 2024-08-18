@@ -14,3 +14,13 @@ export async function changeHeartColor(newHeartColor) {
   await updateSetting(data.id, newData);
   revalidatePath("/", "layout");
 }
+
+export async function changeIcon(prevData, formData) {
+  const newManIcon = formData.get("manIcon");
+  const womanIcon = formData.get("womanIcon");
+  console.log(womanIcon);
+  const data = await getAllSetting();
+  //   const newData = { ...data, icon: newIcon };
+  //   await updateSetting(data.id, newData);
+  //   revalidatePath("/", "layout");
+}
