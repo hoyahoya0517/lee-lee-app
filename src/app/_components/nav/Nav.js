@@ -1,6 +1,6 @@
 import { useState } from "react";
 import stlyes from "./Nav.module.css";
-import ColorChange from "../colorChange/colorChane";
+import ColorChange from "../colorChange/colorChange";
 
 export default function Nav({ navOn, heartColor }) {
   const [colorOn, setColorOn] = useState(false);

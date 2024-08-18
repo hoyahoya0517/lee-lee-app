@@ -54,3 +54,6 @@
   gap: 0.8rem;
   margin: 1.5rem 1rem;
 }
+.menu span:hover {
+  transform: scale(1.3);
+}
