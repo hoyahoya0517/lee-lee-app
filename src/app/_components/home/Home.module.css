@@ -1,0 +1,44 @@
+.home {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+.icon {
+  position: fixed;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5rem;
+}
+.icon span {
+  font-size: 3rem;
+}
+.heart {
+  position: relative;
+  z-index: 2;
+}
+.heart span {
+  font-size: 1rem;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu {
+  position: fixed;
+  bottom: 1.5%;
+  right: 3%;
+  display: flex;
+  width: 60px;
+  z-index: 9999;
+}
+.menu img {
+  width: 100%;
+}

@@ -7,6 +7,7 @@
   left: -2%;
   transition: 0.7s;
   transform: rotate(0);
+  perspective: 400px;
 }
 .navOn img {
   height: 100%;
@@ -21,17 +22,35 @@
   left: 500%;
   transition: 1s;
   transform: rotate(60deg);
+  perspective: 400px;
 }
 .navOff img {
   height: 100%;
   object-fit: cover;
 }
-.menu {
-  background-color: blueviolet;
+.menuContainer {
+  width: 100%;
+  height: 100%;
+  background-color: white;
   z-index: 3333;
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 60%;
-  left: 25%;
+  width: 200px;
+  height: 140px;
+  top: 59.5%;
+  left: 8%;
+  display: flex;
+  transform: rotateY(20deg);
+  transform: rotateX(30deg);
+  overflow: scroll;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 1.5rem 1rem;
 }
