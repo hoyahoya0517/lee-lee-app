@@ -3,13 +3,17 @@ import styles from "./colorChange.module.css";
 import { useState } from "react";
 import { changeHeartColor } from "../../../server/server";
 
-export default function ColorChange({ heartColor }) {
+export default function ColorChange({ menuOn, heartColor }) {
   const [newHeartcolor, setNewHeartColor] = useState(heartColor);
   const handleChnage = (color) => {
     changeHeartColor(color.hex);
   };
   return (
-    <div className={styles.colorChange}>
+    <div
+      className={
+        menuOn === "heartColor" ? styles.colorChangeOn : styles.colorChangeOff
+      }
+    >
       <SketchPicker
         color={newHeartcolor}
         onChange={(color) => {

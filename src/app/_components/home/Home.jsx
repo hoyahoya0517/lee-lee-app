@@ -9,7 +9,7 @@ import Nav from "../nav/Nav";
 
 dayjs.extend(relativeTime);
 
-export default function Home({ setting }) {
+export default function Home({ setting, wishList }) {
   const [heartOn, setHeartOn] = useState(false);
   const [navOn, setNavOn] = useState(false);
   const [day, setDay] = useState("");
@@ -52,7 +52,7 @@ export default function Home({ setting }) {
       >
         <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
       </motion.div>
-      <Nav navOn={navOn} heartColor={setting?.heartColor} />
+      <Nav navOn={navOn} heartColor={setting?.heartColor} wishList={wishList} />
     </div>
   );
 }

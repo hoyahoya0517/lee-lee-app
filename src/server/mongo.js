@@ -5,6 +5,7 @@ const mongoURL = process.env.MONGO_URL;
 const client = new MongoClient(mongoURL);
 const db = client.db("lee-date-app");
 const setting = db.collection("setting");
+const wishList = db.collection("wishList");
 
 async function fixArrayId(data) {
   return data.map((element) => {
@@ -37,4 +38,10 @@ export async function updateSetting(id, newData) {
     },
     { upsert: true }
   );
+}
+
+export async function getAllWishList() {
+  const arrayData = await wishList.find().toArray();
+  const fixData = await fixId(arrayData[0]);
+  return fixData;
 }
