@@ -45,3 +45,16 @@ export async function getAllWishList() {
   const fixData = await fixId(arrayData[0]);
   return fixData;
 }
+
+export async function updateWishList(id, newData) {
+  delete newData._id;
+  await wishList.updateOne(
+    { _id: new ObjectId(id) },
+    {
+      $set: {
+        ...newData,
+      },
+    },
+    { upsert: true }
+  );
+}

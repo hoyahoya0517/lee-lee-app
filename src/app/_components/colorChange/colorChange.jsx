@@ -5,7 +5,7 @@ import { changeHeartColor } from "../../../server/server";
 
 export default function ColorChange({ menuOn, heartColor }) {
   const [newHeartcolor, setNewHeartColor] = useState(heartColor);
-  const handleChnage = (color) => {
+  const handleChange = (color) => {
     changeHeartColor(color.hex);
   };
   return (
@@ -20,7 +20,7 @@ export default function ColorChange({ menuOn, heartColor }) {
           setNewHeartColor(color);
         }}
         onChangeComplete={(color) => {
-          handleChnage(color);
+          handleChange(color);
         }}
         width={250}
       />

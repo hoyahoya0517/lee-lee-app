@@ -52,7 +52,11 @@ export default function Home({ setting, wishList }) {
       >
         <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
       </motion.div>
-      <Nav navOn={navOn} heartColor={setting?.heartColor} wishList={wishList} />
+      <Nav
+        navOn={navOn}
+        heartColor={setting?.heartColor}
+        wishList={wishList.text}
+      />
     </div>
   );
 }

@@ -1,7 +1,12 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { getAllSetting, getAllWishList, updateSetting } from "./mongo";
+import {
+  getAllSetting,
+  getAllWishList,
+  updateSetting,
+  updateWishList,
+} from "./mongo";
 
 export async function getSetting() {
   const data = await getAllSetting();
@@ -18,4 +23,11 @@ export async function changeHeartColor(newHeartColor) {
 export async function getWishList() {
   const data = await getAllWishList();
   return data;
+}
+
+export async function updateMemo(newMemo) {
+  const data = await getWishList();
+  const newData = { ...data, text: newMemo };
+  await updateWishList(data.id, newData);
+  revalidatePath("/", "layout");
 }
