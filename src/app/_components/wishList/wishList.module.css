@@ -1,6 +1,6 @@
 .wishListOn {
   position: fixed;
-  top: 6%;
+  top: 3%;
   left: 6%;
   transition: 0.5s ease-out;
   width: 260px;
@@ -11,7 +11,7 @@
 }
 .wishListOff {
   position: fixed;
-  top: 6%;
+  top: 3%;
   left: -200%;
   transition: 0.5s ease-in;
   width: 260px;

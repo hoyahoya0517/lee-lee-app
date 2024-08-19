@@ -1,6 +1,6 @@
 .colorChangeOn {
   position: fixed;
-  top: 6%;
+  top: 3%;
   left: 6%;
   transition: 0.5s ease-out;
 }
