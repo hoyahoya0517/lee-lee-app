@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./wishList.module.css";
 import { updateMemo } from "../../../server/server";
+import { motion } from "framer-motion";
 
 export default function WishList({ wishList, menuOn }) {
   const [memo, setMemo] = useState(wishList);
@@ -23,10 +24,12 @@ export default function WishList({ wishList, menuOn }) {
     <div
       className={menuOn === "wishList" ? styles.wishListOn : styles.wishListOff}
     >
-      <div className={styles.top}></div>
-      <div className={styles.main}>
-        <textarea value={memo} onChange={handleChange} />
-      </div>
+      <motion.div drag className={styles.container}>
+        <div className={styles.top}></div>
+        <div className={styles.main}>
+          <textarea value={memo} onChange={handleChange} />
+        </div>
+      </motion.div>
     </div>
   );
 }

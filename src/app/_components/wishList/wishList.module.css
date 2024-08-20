@@ -5,9 +5,6 @@
   transition: 0.5s ease-out;
   width: 260px;
   height: 344px;
-  background-color: #fef39c;
-  display: flex;
-  flex-direction: column;
 }
 .wishListOff {
   position: fixed;
@@ -16,7 +13,10 @@
   transition: 0.5s ease-in;
   width: 260px;
   height: 344px;
-  background-color: white;
+}
+.container {
+  height: 100%;
+  background-color: #fef39c;
   display: flex;
   flex-direction: column;
 }

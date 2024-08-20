@@ -25,7 +25,7 @@ export default function Nav({ navOn, heartColor, wishList }) {
               else setMenuOn(null);
             }}
           >
-            WISH LIST
+            MEMO
           </span>
         </div>
       </div>
