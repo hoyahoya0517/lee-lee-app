@@ -50,7 +50,17 @@ export default function Home({ setting, wishList }) {
           setNavOn((prev) => !prev);
         }}
       >
-        <img src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png" />
+        <motion.img
+          animate={navOn ? { rotateZ: 360 } : {}}
+          transition={{
+            delay: 0.5,
+            repeat: Infinity,
+            duration: 2,
+            from: 0,
+            ease: "linear",
+          }}
+          src="https://res.cloudinary.com/hoyahoya/image/upload/v1723302901/leelee/levi_gb47du.png"
+        />
       </motion.div>
       <Nav
         navOn={navOn}

@@ -26,7 +26,7 @@ export default function WishList({ wishList, menuOn }) {
       <div className={styles.container}>
         <div className={styles.top}></div>
         <div className={styles.main}>
-          <textarea value={memo} onChange={handleChange} />
+          <textarea spellCheck={false} value={memo} onChange={handleChange} />
         </div>
       </div>
     </div>
