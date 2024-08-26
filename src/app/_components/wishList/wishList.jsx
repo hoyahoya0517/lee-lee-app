@@ -8,8 +8,8 @@ export default function WishList({ wishList, menuOn }) {
   const handleChange = (e) => {
     setMemo(e.target.value);
   };
-  const handleChangeMemo = () => {
-    updateMemo(memo);
+  const handleChangeMemo = async () => {
+    await updateMemo(memo);
   };
   useEffect(() => {
     clearTimeout(timer);

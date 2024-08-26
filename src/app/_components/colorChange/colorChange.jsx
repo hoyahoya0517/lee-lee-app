@@ -5,8 +5,8 @@ import { changeHeartColor } from "../../../server/server";
 
 export default function ColorChange({ menuOn, heartColor }) {
   const [newHeartcolor, setNewHeartColor] = useState(heartColor);
-  const handleChange = (color) => {
-    changeHeartColor(color.hex);
+  const handleChange = async (color) => {
+    await changeHeartColor(color.hex);
   };
   return (
     <div
