@@ -16,7 +16,7 @@ export default function WishList({ wishList, menuOn }) {
     setTimer(
       setTimeout(() => {
         handleChangeMemo();
-      }, 800)
+      }, 500)
     );
   }, [memo]);
   return (
