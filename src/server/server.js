@@ -10,6 +10,7 @@ import {
 
 export async function getSetting() {
   const data = await getAllSetting();
+  revalidatePath("/", "layout");
   return data;
 }
 
@@ -22,6 +23,7 @@ export async function changeHeartColor(newHeartColor) {
 
 export async function getWishList() {
   const data = await getAllWishList();
+  revalidatePath("/", "layout");
   return data;
 }
 
